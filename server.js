@@ -52,8 +52,18 @@ client.on('message', async (message) => {
                     }
                 }
                 break;
+            case 'rank':
+                let data = await getData();
+                data.sort((a,b) => b.usdLast - a.usdLast);
+                let s = '';
+                for (let i in data) {
+                    const val = data[i];
+                    s += `${(Number(i) + 1)}. ${val.exchangeName} at ${val.usdLast}\n${val.url}\n`
+                }
+                message.channel.send(s);
+                break;
             case 'help':
-                message.channel.send(`My prefix is **${config.prefix}**\n-Use **~price** to see the current pice of safemoon\n-Use **~set** to set your safemoon balance\n-Use **~get** to see how much your safemoon is worth`)
+                message.channel.send(`My prefix is **${config.prefix}**\n-Use **~price** to see the current pice of safemoon\n-Use **~set** to set your safemoon balance\n-Use **~get** to see how much your safemoon is worth\n-Use **~rank** to find the best place to sell`)
         }
     }
 });
@@ -68,7 +78,6 @@ async function getPrice() {
 async function setStatus() {
     let info = await firstRes();
     client.user.setPresence({activity: {name: `$${info.usdLast}`}});
-    console.log(await firstRes().close)
     setTimeout(setStatus, 1 * 60000)
     console.log('Status set')
 }
