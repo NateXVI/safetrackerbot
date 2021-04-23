@@ -53,7 +53,7 @@ client.on('message', async (message) => {
                 }
                 break;
             case 'help':
-                message.channel.send(`My prefix is **${config.prefix}**\n-Use **~price** to see the current pice of safemoon\n-Use **~set** to set your safecoin balance\n-Use **~get** to see how much your safemoon is worth`)
+                message.channel.send(`My prefix is **${config.prefix}**\n-Use **~price** to see the current pice of safemoon\n-Use **~set** to set your safemoon balance\n-Use **~get** to see how much your safemoon is worth`)
         }
     }
 });
@@ -68,6 +68,7 @@ async function getPrice() {
 async function setStatus() {
     client.user.setPresence({activity: {name: `$${await getPrice()}`}});
     setTimeout(setStatus, 1 * 60000)
+    console.log('Status set')
 }
 
 async function getValue(id) {
