@@ -24,6 +24,7 @@ const client = new Client();
 // when bot connects
 client.on('ready', () => {
     console.log(`${client.user.username} connected`)
+    bot.setStatus(client);
 });
 
 client.on('message', (message) => {
