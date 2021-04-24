@@ -42,7 +42,6 @@ class Bot {
     async setStatus(client) {
         let data = await this.api.getOne();
         client.user.setPresence({activity: {name: `$${data.usdLast}`}})
-        setTimeout(this.setStatus, 60000);
         console.log('status set')
     }
     comma(x) {    

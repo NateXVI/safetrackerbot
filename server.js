@@ -25,6 +25,9 @@ const client = new Client();
 client.on('ready', () => {
     console.log(`${client.user.username} connected`)
     bot.setStatus(client);
+    setInterval(function(client) {
+        bot.setStatus(client);
+    }, 60000, client)
 });
 
 client.on('message', (message) => {
