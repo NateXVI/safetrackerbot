@@ -11,7 +11,7 @@ class Bot {
         let data = await this.api.getOne();
         console.log(data);
         if (quantity) {
-            message.channel.send(`Your **${this.comma(quantity)}** safemoon is worth **${this.comma(data.usdLast * quantity)}**\nSource: ${data.exchangeName} at ${this.comma(data.usdLast)}`);
+            message.channel.send(`Your **${this.comma(quantity)}** safemoon is worth **$${this.comma(data.usdLast * quantity)}**\nSource: ${data.exchangeName} at ${this.comma(data.usdLast)}`);
         } else {
             message.channel.send('Gotta know how much you have first. Use the **set** command followed by the number to lemme know.')
         }
