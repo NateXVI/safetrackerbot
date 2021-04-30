@@ -72,4 +72,12 @@ Copy the link generated and paste it into your address bar
 
 Select the server you want to add it to and you are done
 
-Send "~help" into a text channel to get a list of commands
+## Bot commands
+
+Use ~help to see a list of commands
+
+Use ~set [number] to tell the bot how much safemoon you have
+
+Use ~price to see how much your safemoon is worth and the current price of safemoon
+
+Use ~rank to see the price of safemoon on different exchanges
