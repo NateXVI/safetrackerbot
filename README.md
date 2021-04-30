@@ -40,7 +40,7 @@ It should look something like this
 
 open a terminal and change the directory to the safetrackerbot folder
 ```
-cd "location of folder"
+cd "location of folder on disk"
 ```
 
 Install necessary packages with this command
