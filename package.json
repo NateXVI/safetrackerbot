@@ -2,9 +2,10 @@
   "name": "safetrackerbot",
   "version": "0.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
-    "test": "nodemon server.js"
+    "test": "nodemon src/server.js",
+    "start": "node src/server.js"
   },
   "author": "Nathan Diven",
   "license": "ISC",
