@@ -1,34 +1,51 @@
-# safetrackerbot
+# Safetrackerbot 🚀
 
-A discord bot used to check the price of Safemoon token.
+# Description
 
-## Prerequisites
+This bot allows you to quickly and easily see the current price of safemoon from its status and you can check the value of a cetrain amount of it too!
 
-You must have [node.js](https://nodejs.org/) installed on you computer
+---
 
 ## Usage
 
-### Create the bot
+`~help` lets you see a list of commands
 
-Go to the [Discord Developer Portal](https://discord.com/developers/applications) and sign in
+`~set [quantity]` lets you set your amount
 
-Create a new application and call it "safetrackerbot"
+`~price` to see how much you safemoon is worth
 
-Goto the application bot settings and add a bot
+`~rank` shows prices for different exchanges
 
-Copy the bot token
+---
 
-### Download code
+## Installation
 
-Clone [this repository](https://github.com/NateXVI/safetrackerbot/archive/refs/heads/main.zip) and unzip it
+#### Prerequisites
 
-### Configure app
+You must have [node.js](https://nodejs.org/) installed on you computer
 
-Go into the folder and duplicate the file called "config-template.json" and rename it "config.json"
+#### Create the bot
 
-Change the "prefix" and "token" parameters in "config.json"
+1. Go to the [Discord Developer Portal](https://discord.com/developers/applications) and sign in
 
-It should look something like this
+2. Create a new application and call it "safetrackerbot"
+
+3. Goto the application bot settings and add a bot
+
+4. Copy the bot token
+
+#### Download code
+
+1. Clone [this repository](https://github.com/NateXVI/safetrackerbot/archive/refs/heads/main.zip) and unzip it
+
+#### Configure app
+
+1. Go into the folder and duplicate the file called "config-template.json" and rename it "config.json"
+
+2. Change the "prefix" and "token" parameters in "config.json"
+
+3. It should look something like this
+
 ```json
 {
   "prefix": "~",
@@ -36,48 +53,44 @@ It should look something like this
 }
 ```
 
-### Install dependencies
+#### Install dependencies
 
-open a terminal and change the directory to the safetrackerbot folder
-```
-cd "location of folder on disk"
+1. open a terminal and change the directory to the safetrackerbot folder
+
+```bash
+cd [folder pathe eg. Downloads/safetrackerbot]
 ```
 
-Install necessary packages with this command
+2. Install necessary packages with this command
 
-```
+```bash
 npm install
 ```
 
-### Run the app
+#### Run the app
 
-Run the app with this command
-```
+1. Run the app with this command
+
+```bash
 npm start
 ```
 
-You should see a message that says "Safetrackerbot connected" and "status set"
+2. You should see a message that says "Safetrackerbot connected" and "status set"
 
-### Add bot to server
+#### Add bot to server
 
-Go back to the application settings on [Discord Developer Portal](https://discord.com/developers/applications)
+1. Go back to the application settings on [Discord Developer Portal](https://discord.com/developers/applications)
 
-Goto OAuth2 tab
+2. Goto OAuth2 tab
 
-Under scopes check "bot"
+3. Under scopes check "bot"
 
-Under bot permissions check "send messages"
+4. Under bot permissions check "send messages"
 
-Copy the link generated and paste it into your address bar
+5. Copy the link generated and paste it into your address bar
 
-Select the server you want to add it to and you are done
+6. Select the server you want to add it to and you are done
 
-## Bot commands
+---
 
-Use ~help to see a list of commands
 
-Use ~set [number] to tell the bot how much safemoon you have
-
-Use ~price to see how much your safemoon is worth and the current price of safemoon
-
-Use ~rank to see the price of safemoon on different exchanges
